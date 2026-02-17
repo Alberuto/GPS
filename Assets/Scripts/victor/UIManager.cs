@@ -1,8 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
-{
+public class UIManager : MonoBehaviour {
 
     public static UIManager Instance;
 
@@ -10,23 +9,19 @@ public class UIManager : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    void Awake()
-    {
+    void Awake() {
         Instance = this;
     }
-    void Start()
-    {
+    void Start() {
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
 
     }
 
-    public void MostrarMensaje(string mensaje)
-    {
+    public void MostrarMensaje(string mensaje) {
         texto.text = mensaje;
     }
 }

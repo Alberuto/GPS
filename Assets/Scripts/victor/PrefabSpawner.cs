@@ -13,8 +13,7 @@ public class PrefabSpawner : MonoBehaviour {
 
     public float spawnDistance = 20f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    void Start() {
 
     }
 

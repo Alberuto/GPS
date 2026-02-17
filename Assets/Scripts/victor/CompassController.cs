@@ -10,14 +10,14 @@ public class CompassController : MonoBehaviour {
 
     public double prefabLon;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    void Start() {
+
         Input.compass.enabled = true;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+
         float heading = Input.compass.trueHeading;
         float bearing = CalculateBearing(
             gpsManager.GetComponent<ScriptGPS>().currentLat,
@@ -28,8 +28,8 @@ public class CompassController : MonoBehaviour {
         arrowUI.localRotation = Quaternion.Euler(0, 0, angle);
     }
 
-    float CalculateBearing(double lat1, double lon1, double lat2, double lon2)
-    {
+    float CalculateBearing(double lat1, double lon1, double lat2, double lon2) {
+
         double dLon = (lon2 - lon1) * Mathf.Deg2Rad;
         lat1 *= Mathf.Deg2Rad;
         lat2 *= Mathf.Deg2Rad;
