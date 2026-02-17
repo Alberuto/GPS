@@ -270,7 +270,9 @@
           },
           {
             "name": "LineRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/1 game.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -291,26 +293,33 @@
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/1 game.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/1 game.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/1 game.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MonoBehaviour",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -324,7 +333,8 @@
           {
             "name": "MonoScript",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 1,
             "icon": null
@@ -371,7 +381,8 @@
           {
             "name": "RectTransform",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -445,7 +456,8 @@
           {
             "name": "Sprite",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -979,7 +991,9 @@
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/1 game.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -997,7 +1011,9 @@
           },
           {
             "name": "MeshCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/1 game.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -1437,7 +1453,8 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1486,7 +1503,8 @@
           {
             "name": "Canvas",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1500,7 +1518,8 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
-              "Assets/Scenes/0 menu.unity"
+              "Assets/Scenes/0 menu.unity",
+              "Assets/Scenes/1 game.unity"
             ],
             "dependencyType": 0,
             "icon": null
