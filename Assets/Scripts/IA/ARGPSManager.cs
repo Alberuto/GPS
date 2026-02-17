@@ -32,7 +32,6 @@ public class ARGPSManager : MonoBehaviour {
         gpsText.text = "Ejecuta Start";
         Input.location.Start();
         Input.compass.enabled = true;
-
         /*
         if (GPSTracker.Instance != null) {
 
@@ -41,8 +40,8 @@ public class ARGPSManager : MonoBehaviour {
         }
         else {
             messageManager?.MostrarMensaje("GPSTracker no encontrado");
-        }*/
-
+        }
+        */
     }
     void UpdateGPSData(LocationInfo gpsData) {
 
@@ -54,6 +53,7 @@ public class ARGPSManager : MonoBehaviour {
         float distance = HaversineDistance(gpsData.latitude, gpsData.longitude, targetLatitude, targetLongitude);
 
         if (gpsText != null) {
+
             gpsText.text += $"\nDistancia: {distance:F1}m";
         }
         CheckTargetProximity(distance);
@@ -67,7 +67,6 @@ public class ARGPSManager : MonoBehaviour {
                 targetObject.SetActive(true);
                 targetObject.transform.position = transform.position + transform.forward * 2f;
                 objectDetected = true;
-
                 messageManager?.MostrarMensaje("¡Pokémon encontrado cerca!");
             }
         }
