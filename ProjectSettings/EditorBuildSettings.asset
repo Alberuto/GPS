@@ -10,6 +10,9 @@ EditorBuildSettings:
     guid: 308d03ad91ad7d84ba482dbc99f7ad44
   - enabled: 1
     path: Assets/Scenes/1 game.unity
+    guid: 1ce7a47b80cbc5241bf1d6825d71579b
+  - enabled: 1
+    path: Assets/Scenes/test.unity
     guid: 9376873afc240414da5c925616e40500
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b0666ee2febbe6f449fb6df9e9da2d82, type: 2}
