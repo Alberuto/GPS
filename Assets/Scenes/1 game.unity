@@ -308,7 +308,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -488,7 +488,6 @@ GameObject:
   m_Component:
   - component: {fileID: 406500120}
   - component: {fileID: 406500119}
-  - component: {fileID: 406500118}
   m_Layer: 0
   m_Name: GPS_Manager
   m_TagString: Untagged
@@ -496,22 +495,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &406500118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406500117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717a8896071eede4fbfed3a994109625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CompassController
-  arrowUI: {fileID: 1882495776}
-  gpsManager: {fileID: 406500119}
-  prefabLat: 37.19220614091147
-  prefabLon: -3.616657461975105
 --- !u!114 &406500119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -829,8 +812,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1030,7 +1013,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1048,7 +1031,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 343703302}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1073,6 +1056,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1882495776}
   - {fileID: 1283601902}
   - {fileID: 2123644676}
   m_Father: {fileID: 0}
@@ -1151,12 +1135,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1412125702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 510, y: 501}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -24.099995, y: -25}
+  m_SizeDelta: {x: 48.2, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882495777
 MonoBehaviour:
@@ -1291,7 +1275,6 @@ SceneRoots:
   - {fileID: 1171815774}
   - {fileID: 876299563}
   - {fileID: 1412125702}
-  - {fileID: 1882495776}
   - {fileID: 406500120}
   - {fileID: 1344787303}
   - {fileID: 373256022}

@@ -470,6 +470,8 @@ extern void AndroidJavaObject_AndroidJavaObjectDeleteLocalRef_m2ECEEAF6389ABB9D6
 extern void AndroidJavaObject_AndroidJavaClassDeleteLocalRef_m56C84D7516BCB51A84E8AFDB3FCA46BAF494548F (void);
 extern void AndroidJavaObject__GetRawObject_mC5B8B60BEF515F5EE2A113D60991A433DA740C69 (void);
 extern void AndroidJavaObject__GetRawClass_m470EAEBF8B0BD365FD13F1C6F55119836452FDFA (void);
+extern void AndroidJavaObjectUnityOwned__ctor_mF8DA87955231B45B7AC84304E86AC8CD312DA027 (void);
+extern void AndroidJavaObjectUnityOwned_Dispose_m045D72E54B58C80491185936F529C8105CE3C3CD (void);
 extern void AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389 (void);
 extern void AndroidJavaClass__AndroidJavaClass_mF481A9584D78F32C64219FDA49CB84B6F0A017DD (void);
 extern void AndroidJavaClass__ctor_mB206D3CB990755BD56E308F61CD43BB9EA4421D0 (void);
@@ -505,7 +507,11 @@ extern void _AndroidJNIHelper_GetSignature_m309D35CC998B59CFEDA2D6EB5D0E221B3F13
 extern void _AndroidJNIHelper__ctor_m0535562F59B589E117E57B8EA07ECE900848F509 (void);
 extern void _AndroidJNIHelper__cctor_m80566B34A0D0D19B2C7ACFAE733727D97DC0060A (void);
 extern void AndroidApplication_get_UnityPlayerRaw_mBCFB4385E5B54A6D6AA9A67360F70A081664CD04 (void);
+extern void AndroidApplication_get_CurrentContextRaw_m67E08FA3BC3B870FE3C0CF7874F5C404EDFB3118 (void);
+extern void AndroidApplication_get_CurrentActivityRaw_m6506A832D3CDCBA80F6F75126566365F543643F7 (void);
 extern void AndroidApplication_AcquireMainThreadSynchronizationContext_m524DF239BD064EB12903BEF7F8EFB524CFA3C3E6 (void);
+extern void AndroidApplication_get_currentContext_m73C722E7D90E2D4A92F979293A2C9E016268AC3F (void);
+extern void AndroidApplication_get_currentActivity_m8E631A52B3ECB3907772B9E3D8DCA861BB5D585A (void);
 extern void AndroidApplication_SetCurrentConfiguration_m1BC4863097BAAE24D1F48FBE8A46FD373F3F8435 (void);
 extern void AndroidApplication_GetCurrentConfiguration_m74AF41ECE40DD1AE7534F1A9B6990C316C115F99 (void);
 extern void AndroidApplication_DispatchConfigurationChanged_m02C77E3BF4C539FDC955495406FC6B80990D554E (void);
@@ -529,6 +535,21 @@ extern void AssetPackManagerStatusQueryCallback__ctor_m66F3B4A8BD8911F07121E2F8E
 extern void AssetPackManagerStatusQueryCallback_onStatusResult_m8C41C5CC2F37808E5C5C12B023DF31E1DF96C314 (void);
 extern void AndroidGame_StopLoading_mD8B272C89C55F12017EC6C38383FBEBFD9B67CE7 (void);
 extern void AndroidInsets_SetNativeHandle_m1AB29E0C89D8F2C96FCD980FBBA65F8186602346 (void);
+extern void PermissionCallbacks_add_PermissionGranted_m74335D4200D9B1A7C80AB9C133F95C61FCDCDF89 (void);
+extern void PermissionCallbacks_remove_PermissionGranted_m4A3F9873FC159F89A2AD35F2FCAFF66A19813AF4 (void);
+extern void PermissionCallbacks_add_PermissionDenied_mE0B2826463785B050C999C70F443FCC3822563D0 (void);
+extern void PermissionCallbacks_remove_PermissionDenied_mF1A606ADE21F9520909126D3642B0BC2D6E994A1 (void);
+extern void PermissionCallbacks_add_PermissionDeniedAndDontAskAgain_mEDE8C00FEF2F649F10A47F30AC4ECB09E52DB9AA (void);
+extern void PermissionCallbacks_remove_PermissionDeniedAndDontAskAgain_m55B04AE58C687946BDFA2094ED851518B2A1D68D (void);
+extern void PermissionCallbacks_add_PermissionRequestDismissed_mBB48C84AA9079C6EBFF350D44B1EC963D1011A3D (void);
+extern void PermissionCallbacks_remove_PermissionRequestDismissed_mF129C6E0BA154A5BA6D438589D02FFD3974DBF8F (void);
+extern void PermissionCallbacks__ctor_m91B14BBBC8913C131E400BA0D13576822AAE7A75 (void);
+extern void PermissionCallbacks_Invoke_m854C0748805F945A4A16C0C8403AAB10B844D7A8 (void);
+extern void PermissionCallbacks_onPermissionResult_m2AD8CAA2CAA8BD91CEAA55F2F4B142FDB755FCBC (void);
+extern void Permission_GetUnityPermissions_m6A22A923A8B036209E6218E24F7AA8CA79AA15BD (void);
+extern void Permission_HasUserAuthorizedPermission_mF4C90E13124E28F6F672200E489CC25A9B645B8B (void);
+extern void Permission_RequestUserPermission_mF9CF3A21AAF34B311137C4D00B3AD6A6C2694242 (void);
+extern void Permission_RequestUserPermissions_m09FE74BF5829C8B48A0E6C9B7F7846FEE763D2DA (void);
 extern void AndroidLocale_get_country_m4CF55D4A3CFD71553C727DB60A539CBD1D732456 (void);
 extern void AndroidLocale_get_language_m78BC34CC08937A1B4B6B70518179902C0824AA73 (void);
 extern void AndroidLocale__ctor_m9E07C7046CD091CDB042C5D34B156C71DCAB38B2 (void);
@@ -562,7 +583,7 @@ extern void AndroidConfiguration_get_screenLayoutSize_mA18253406CBD702D355073E0F
 extern void AndroidConfiguration_get_uiModeNight_m3561F470AF4D4BC9AFC6583DE93F861CF8FFEFEC (void);
 extern void AndroidConfiguration_get_uiModeType_mCC57F1E35C09495E9A3FD7CBD57778131E4A4D8E (void);
 extern void AndroidConfiguration_ToString_mFCA4EDDA524358A9BD9D83833DD2A0124DEADB45 (void);
-static Il2CppMethodPointer s_methodPointers[599] = 
+static Il2CppMethodPointer s_methodPointers[620] = 
 {
 	AndroidJNIHelper_get_debug_m0F67D4E412EBE1D511C42F5F12294C63E669C907,
 	AndroidJNIHelper_set_debug_m66E40D20DC9DC69BD7B139DA5C367BA1185FCA3F,
@@ -1067,6 +1088,8 @@ static Il2CppMethodPointer s_methodPointers[599] =
 	NULL,
 	AndroidJavaObject__GetRawObject_mC5B8B60BEF515F5EE2A113D60991A433DA740C69,
 	AndroidJavaObject__GetRawClass_m470EAEBF8B0BD365FD13F1C6F55119836452FDFA,
+	AndroidJavaObjectUnityOwned__ctor_mF8DA87955231B45B7AC84304E86AC8CD312DA027,
+	AndroidJavaObjectUnityOwned_Dispose_m045D72E54B58C80491185936F529C8105CE3C3CD,
 	AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389,
 	AndroidJavaClass__AndroidJavaClass_mF481A9584D78F32C64219FDA49CB84B6F0A017DD,
 	AndroidJavaClass__ctor_mB206D3CB990755BD56E308F61CD43BB9EA4421D0,
@@ -1106,7 +1129,11 @@ static Il2CppMethodPointer s_methodPointers[599] =
 	_AndroidJNIHelper__ctor_m0535562F59B589E117E57B8EA07ECE900848F509,
 	_AndroidJNIHelper__cctor_m80566B34A0D0D19B2C7ACFAE733727D97DC0060A,
 	AndroidApplication_get_UnityPlayerRaw_mBCFB4385E5B54A6D6AA9A67360F70A081664CD04,
+	AndroidApplication_get_CurrentContextRaw_m67E08FA3BC3B870FE3C0CF7874F5C404EDFB3118,
+	AndroidApplication_get_CurrentActivityRaw_m6506A832D3CDCBA80F6F75126566365F543643F7,
 	AndroidApplication_AcquireMainThreadSynchronizationContext_m524DF239BD064EB12903BEF7F8EFB524CFA3C3E6,
+	AndroidApplication_get_currentContext_m73C722E7D90E2D4A92F979293A2C9E016268AC3F,
+	AndroidApplication_get_currentActivity_m8E631A52B3ECB3907772B9E3D8DCA861BB5D585A,
 	AndroidApplication_SetCurrentConfiguration_m1BC4863097BAAE24D1F48FBE8A46FD373F3F8435,
 	AndroidApplication_GetCurrentConfiguration_m74AF41ECE40DD1AE7534F1A9B6990C316C115F99,
 	AndroidApplication_DispatchConfigurationChanged_m02C77E3BF4C539FDC955495406FC6B80990D554E,
@@ -1130,6 +1157,21 @@ static Il2CppMethodPointer s_methodPointers[599] =
 	AssetPackManagerStatusQueryCallback_onStatusResult_m8C41C5CC2F37808E5C5C12B023DF31E1DF96C314,
 	AndroidGame_StopLoading_mD8B272C89C55F12017EC6C38383FBEBFD9B67CE7,
 	AndroidInsets_SetNativeHandle_m1AB29E0C89D8F2C96FCD980FBBA65F8186602346,
+	PermissionCallbacks_add_PermissionGranted_m74335D4200D9B1A7C80AB9C133F95C61FCDCDF89,
+	PermissionCallbacks_remove_PermissionGranted_m4A3F9873FC159F89A2AD35F2FCAFF66A19813AF4,
+	PermissionCallbacks_add_PermissionDenied_mE0B2826463785B050C999C70F443FCC3822563D0,
+	PermissionCallbacks_remove_PermissionDenied_mF1A606ADE21F9520909126D3642B0BC2D6E994A1,
+	PermissionCallbacks_add_PermissionDeniedAndDontAskAgain_mEDE8C00FEF2F649F10A47F30AC4ECB09E52DB9AA,
+	PermissionCallbacks_remove_PermissionDeniedAndDontAskAgain_m55B04AE58C687946BDFA2094ED851518B2A1D68D,
+	PermissionCallbacks_add_PermissionRequestDismissed_mBB48C84AA9079C6EBFF350D44B1EC963D1011A3D,
+	PermissionCallbacks_remove_PermissionRequestDismissed_mF129C6E0BA154A5BA6D438589D02FFD3974DBF8F,
+	PermissionCallbacks__ctor_m91B14BBBC8913C131E400BA0D13576822AAE7A75,
+	PermissionCallbacks_Invoke_m854C0748805F945A4A16C0C8403AAB10B844D7A8,
+	PermissionCallbacks_onPermissionResult_m2AD8CAA2CAA8BD91CEAA55F2F4B142FDB755FCBC,
+	Permission_GetUnityPermissions_m6A22A923A8B036209E6218E24F7AA8CA79AA15BD,
+	Permission_HasUserAuthorizedPermission_mF4C90E13124E28F6F672200E489CC25A9B645B8B,
+	Permission_RequestUserPermission_mF9CF3A21AAF34B311137C4D00B3AD6A6C2694242,
+	Permission_RequestUserPermissions_m09FE74BF5829C8B48A0E6C9B7F7846FEE763D2DA,
 	AndroidLocale_get_country_m4CF55D4A3CFD71553C727DB60A539CBD1D732456,
 	AndroidLocale_get_language_m78BC34CC08937A1B4B6B70518179902C0824AA73,
 	AndroidLocale__ctor_m9E07C7046CD091CDB042C5D34B156C71DCAB38B2,
@@ -1171,7 +1213,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 	{ 0x06000139, JStringBinding_ToString_mD50BA7AA65F37BF1CD48CCAF39BCCDD91C2B9051_AdjustorThunk },
 	{ 0x0600013A, JStringBinding_Dispose_m4182F892B4BFDAF1271D9FCAF22B7B3A4483ACE5_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[599] = 
+static const int32_t s_InvokerIndices[620] = 
 {
 	27922,
 	26738,
@@ -1676,6 +1718,8 @@ static const int32_t s_InvokerIndices[599] =
 	-1,
 	16058,
 	16058,
+	12347,
+	12207,
 	12415,
 	12415,
 	12347,
@@ -1715,7 +1759,11 @@ static const int32_t s_InvokerIndices[599] =
 	16342,
 	28083,
 	27960,
+	27960,
+	27960,
 	28083,
+	27979,
+	27979,
 	26752,
 	27979,
 	26738,
@@ -1739,6 +1787,21 @@ static const int32_t s_InvokerIndices[599] =
 	1740,
 	26748,
 	12347,
+	12415,
+	12415,
+	12415,
+	12415,
+	12415,
+	12415,
+	12415,
+	12415,
+	16342,
+	4528,
+	12347,
+	27979,
+	25960,
+	26752,
+	23759,
 	16127,
 	16127,
 	6213,
@@ -1815,10 +1878,10 @@ static const Il2CppTokenRangePair s_rgctxIndices[44] =
 	{ 0x060001F1, { 84, 2 } },
 	{ 0x060001F4, { 86, 2 } },
 	{ 0x060001F5, { 88, 2 } },
-	{ 0x06000210, { 90, 2 } },
-	{ 0x06000213, { 92, 1 } },
-	{ 0x06000214, { 93, 1 } },
-	{ 0x0600021B, { 94, 1 } },
+	{ 0x06000212, { 90, 2 } },
+	{ 0x06000215, { 92, 1 } },
+	{ 0x06000216, { 93, 1 } },
+	{ 0x0600021D, { 94, 1 } },
 };
 extern const uint32_t g_rgctx__AndroidJNIHelper_ConvertFromJNIArray_TisArrayType_t33FA9A7F66F041B4E2878FF619DA2A8FCDD39085_m2DE197CE4F8061C7658B6308D28812D6AE662FE5;
 extern const uint32_t g_rgctx_ArrayType_t33FA9A7F66F041B4E2878FF619DA2A8FCDD39085;
@@ -2017,7 +2080,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGen
 const Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGenModule = 
 {
 	"UnityEngine.AndroidJNIModule.dll",
-	599,
+	620,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,

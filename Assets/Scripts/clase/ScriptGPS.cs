@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Android;
@@ -11,32 +12,41 @@ public class ScriptGPS : MonoBehaviour {
     private double targetLon = -3.616657461975105;
 
     public float currentLat;
-
     public float currentLon;
-
 
     public float detectionRadius = 60f;
 
     private bool isSpawned = false;
     public GameObject prefab;
-
     private GameObject spawnedObject;
     public ARRaycastManager raycastManager;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start() {
 
         #if UNITY_ANDROID
             Permission.RequestUserPermission(Permission.FineLocation);
         #endif
 
-        if (!Input.location.isEnabledByUser) return;
+        StartCoroutine(IniciarGPS());
 
-        UIManager.Instance.MostrarMensaje("Ejecuta Start");
+    }
+    IEnumerator IniciarGPS() {
+
+        if (!Input.location.isEnabledByUser) {
+            UIManager.Instance.MostrarMensaje("GPS desactivado móvil");
+            yield break;
+        }
         Input.location.Start();
+        int maxWait = 20;
+        while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0) {
+            yield return new WaitForSeconds(1);
+            maxWait--;
+        }
+        if (Input.location.status != LocationServiceStatus.Running) {
+            UIManager.Instance.MostrarMensaje($"GPS Falló: {Input.location.status}");
+        }
         Input.compass.enabled = true;
     }
-
-    // Update is called once per frame
     void Update() {
 
         UIManager.Instance.MostrarMensaje(Input.location.status.ToString());
@@ -48,16 +58,16 @@ public class ScriptGPS : MonoBehaviour {
             double distance = CalculateDistance(currentLat, currentLon, targetLat, targetLon);
             if (distance <= detectionRadius && !isSpawned) {
 
-                UIManager.Instance.MostrarMensaje("�Has encontrado un objeto! Iniciando RA...");
+                UIManager.Instance.MostrarMensaje("¡Has encontrado un objeto! Iniciando RA...");
                 //Aqui se activa el modelo o se cambia de escena
                 SpawnObjectInAR_Plane();
             }
             else {
-                UIManager.Instance.MostrarMensaje($"GPS M�vil: {currentLat}, {currentLon}, Target (Google): {targetLat}, {targetLon} Distancia: {distance}");
+                UIManager.Instance.MostrarMensaje($"GPS Móvil: {currentLat}, {currentLon}, Target (Google): {targetLat}, {targetLon} Distancia: {distance}");
             }
         }
     }
-    //F�rmula de Haversine para calcular distancia en metros
+    //Fórmula de Haversine para calcular distancia en metros
     double CalculateDistance(double lat1, double lon1, double lat2, double lon2) {
 
         double R = 6371000;
@@ -84,13 +94,18 @@ public class ScriptGPS : MonoBehaviour {
     }
     void SpawnObjectInAR_Plane() {
 
+        if (isSpawned) return; //prevenir múltiples spawns
+
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         if (raycastManager.Raycast(
            new Vector2(Screen.width / 2, Screen.height / 2),
            hits,
            UnityEngine.XR.ARSubsystems.TrackableType.Planes)) {
 
-            Instantiate(prefab, hits[0].pose.position, Quaternion.identity);
+           spawnedObject = Instantiate(prefab, hits[0].pose.position, Quaternion.identity);
+           isSpawned = true; // ← SOLO UNA VEZ
+           UIManager.Instance.MostrarMensaje("¡CUBE SPAWNEADO!");
+
         }
     }
 }
